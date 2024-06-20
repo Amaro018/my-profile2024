@@ -1,28 +1,30 @@
+"use client";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import Projects from "./projects.js";
 
 export default function Home() {
   return (
     <main className="flex flex-col p-2 bg-white dark:text-white dark:bg-black md:p-24">
-      <div className="flex flex-col justify-between w-full items-center md:flex-row">
+      <div className="flex flex-col justify-between w-full items-center md:flex-row px-24">
         <div className="logo text-2xl md:text-4xl">
           <h1>
             Amaro,<span className="font-bold">Jhomari</span>
           </h1>
         </div>
         <div className="flex flex-row gap-4 text-xl">
-          <a href="#" className="hover:font-bold hover:underline">
+          <a href="#about" className="hover:font-bold hover:underline">
             About
           </a>
-          <a href="#" className="hover:font-bold hover:underline">
+          <a href="#skill" className="hover:font-bold hover:underline">
             Skill
           </a>
-          <a href="#" className="hover:font-bold hover:underline">
+          <a href="#contact" className="hover:font-bold hover:underline">
             Contact
           </a>
-          <a href="#" className="hover:font-bold hover:underline">
+          <a href="#projects" className="hover:font-bold hover:underline">
             Projects
           </a>
         </div>
@@ -76,7 +78,7 @@ export default function Home() {
       </section>
       <section id="skill" className="my-2">
         <div className="text-center my-4">
-          <p className="text-4xl font-bold">Skills</p>
+          <p className="text-4xl font-bold">Web Development Skills</p>
         </div>
         <div className="w-full flex justify-center gap-4">
           <svg
@@ -93,6 +95,18 @@ export default function Home() {
             className="w-24 h-24"
           >
             <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z" />
+          </svg>
+
+          <svg
+            className="w-24 h-24"
+            viewBox="10 0 64 64"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.49 18.205C14.962 9.526 21.064 6.19 28.796 8.197c3.723.996 6.297 3.263 8.017 6.245 2.96 4.986 5.974 6.76 9.085 5.325 1.49-.7 2.978-2.113 4.468-4.225-4.47 8.679-10.574 12.014-18.305 10.008-3.722-.997-6.296-3.263-8.016-6.246-2.96-4.986-5.975-6.76-9.085-5.325-1.491.7-2.979 2.113-4.469 4.225zm16 18C36.962 27.526 43.064 24.19 50.796 26.197c3.723.996 6.297 3.263 8.017 6.245 2.96 4.986 5.974 6.76 9.085 5.325 1.49-.7 2.978-2.113 4.468-4.225-4.47 8.679-10.574 12.014-18.305 10.008-3.722-.997-6.296-3.263-8.016-6.246-2.96-4.986-5.975-6.76-9.085-5.325-1.491.7-2.979 2.113-4.469 4.225z"
+              fill="black"
+              fillRule="nonzero"
+            />
           </svg>
 
           <svg
@@ -136,8 +150,65 @@ export default function Home() {
           </svg>
         </div>
       </section>
-      <section id="contact">
-        <div></div>
+
+      <section id="contact" className="w-full">
+        <div className="text-center my-4">
+          <p className="text-4xl font-bold">Contact</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <form className="w-full max-w-lg">
+            <div className="mb-4">
+              <label
+                htmlFor="name"
+                className="block text-gray-700 dark:text-white text-sm font-bold mb-2"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-900 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className="block text-gray-700 dark:text-white text-sm font-bold mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-900 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="message"
+                className="block text-gray-700 dark:text-white text-sm font-bold mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-900 leading-tight focus:outline-none focus:shadow-outline"
+                rows="5"
+              ></textarea>
+            </div>
+            <div className="flex items-center justify-between">
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="projects">
+        <Projects />
       </section>
     </main>
   );
