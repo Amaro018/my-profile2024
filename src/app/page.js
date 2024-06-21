@@ -5,9 +5,13 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Projects from "./projects.js";
 
+
+
 export default function Home() {
   return (
     <main className="flex flex-col p-2 bg-white dark:text-white dark:bg-black md:p-24">
+      
+      
       <div className="flex flex-col justify-between w-full items-center md:flex-row px-24">
         <div className="logo text-2xl md:text-4xl">
           <h1>
@@ -30,7 +34,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section id="introduction">
+      <section id="introduction" className="my-16">
         <div className="flex flex-col w-full p-2 items-center justify-between md:flex-row my-4 md:px-24 ">
           <div className="w-1/2 flex">
             <Image
@@ -151,6 +155,12 @@ export default function Home() {
         </div>
       </section>
 
+      
+      <section id="projects">
+
+        <Projects />
+      </section>
+
       <section id="contact" className="w-full">
         <div className="text-center my-4">
           <p className="text-4xl font-bold">Contact</p>
@@ -206,9 +216,6 @@ export default function Home() {
             </div>
           </form>
         </div>
-      </section>
-      <section id="projects">
-        <Projects />
       </section>
     </main>
   );
