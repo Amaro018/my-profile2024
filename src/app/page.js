@@ -233,13 +233,13 @@ export default function Home() {
                   href="mailto:jhomari.amaro@gmail.com"
                   className="text-blue-500 hover:underline"
                 >
-                  amarojhomari@gmail.com
+                  jhomari.amaro@gmail.com
                 </a>
               </p>
               <p className="text-xl">
                 LinkedIn:{" "}
                 <a
-                  href="https://www.linkedin.com/in/jhomari-amaro"
+                  href="https://www.linkedin.com/in/jhomari-amaro-945987242/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
