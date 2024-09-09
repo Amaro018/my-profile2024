@@ -93,9 +93,9 @@ const Projects = () => {
       <div className="text-center my-4">
         <p className="text-4xl font-bold">Projects</p>
       </div>
-      <div className="text-center my-4">
+      {/* <div className="text-center my-4">
         <p className="text-4xl font-bold">Subli Online Rental Shop</p>
-      </div>
+      </div> */}
       <div className="flex flex-wrap justify-center  gap-4">
         {projects.map((project) => (
           <div

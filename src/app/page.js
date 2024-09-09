@@ -209,9 +209,9 @@ export default function Home() {
             <p className="text-xl">
               I have experience in web development using HTML, CSS, and
               JavaScript. I am proficient in front-end technologies such as
-              React, Angular, and Vue.js. On the backend, I have worked with
-              Node.js and PHP frameworks like Laravel. I also have experience
-              with databases including MySQL and MongoDB. Additionally, I am
+              React, Angular, Tailwind, jQuery, and Vue.js. On the backend, I have worked with
+              Node.js and PHP frameworks like Laravel and Next.js. I also have experience
+              with databases including MySQL and Prisma. Additionally, I am
               familiar with version control systems like Git.
             </p>
           </div>
