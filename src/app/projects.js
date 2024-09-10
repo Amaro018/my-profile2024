@@ -9,7 +9,7 @@ const projectsData = [
     title: "Temp Converter",
     description:
       "A simple temperature converter from celcius to farenheit and vice versa made by old skool html,css and js",
-    image: "/images/temp.jpg",
+    image: "/images/temp.JPG",
     link: "https://temperature-converter-jade.vercel.app/",
   },
   {
@@ -17,14 +17,14 @@ const projectsData = [
     title: "Jak En Poy",
     description:
       "A simple rock, paper, scissors game with computer made by old skool html,css and js",
-    image: "/images/game.jpg",
+    image: "/images/game.JPG",
     link: "https://jak-en-poy-ten.vercel.app/",
   },
   {
     id: 3,
     title: "Stop Watch",
     description: "A simple Stop watch made by react with vite",
-    image: "/images/stop.jpg",
+    image: "/images/stop.JPG",
     link: "https://stop-watch-react-tau.vercel.app/",
   },
   {
@@ -38,35 +38,35 @@ const projectsData = [
     id: 5,
     title: "Shiny Pokemon Cry",
     description: "A simple fetching shiny pokemon cry made by html,css,javascript",
-    image: "/images/shiny.jpg",
+    image: "/images/shiny.JPG",
     link: "https://poke-10w5jxy3l-jhomari-amaros-projects.vercel.app/",
   },
   {
     id: 6,
     title: "Weather API",
     description: "Fetching weather data for a city using HTML, CSS, and JavaScript.",
-    image: "/images/weather.jpg",
+    image: "/images/weather.JPG",
     link: "https://my-weather-app-blush-xi.vercel.app/",
   },
   {
     id: 7,
     title: "TODO LIST",
     description: "A simple todo list using React with vite",
-    image: "/images/todo.jpg",
+    image: "/images/todo.JPG",
     link: "https://to-do-list-seven-rosy.vercel.app/",
   },
   {
     id: 8,
     title: "Calculator",
     description: "A simple calculator made by HTML,CSS and JS.",
-    image: "/images/calcu.jpg",
+    image: "/images/calcu.JPG",
     link: "https://calculator-olive-one.vercel.app/",
   },
   {
     id: 9,
     title: "Netflix Clone",
     description: "A netflix clone landing page using HTML and CSS",
-    image: "/images/clone.jpg",
+    image: "/images/clone.JPG",
     link: "https://netflix-clone-wheat-delta.vercel.app/",
   },
 ];
