@@ -6,3 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  @apply transition-colors duration-200;
+}
+
+

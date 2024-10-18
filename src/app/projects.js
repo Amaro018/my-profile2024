@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projectsData = [
   {
@@ -96,36 +97,28 @@ const Projects = () => {
       {/* <div className="text-center my-4">
         <p className="text-4xl font-bold">Subli Online Rental Shop</p>
       </div> */}
-      <div className="flex flex-wrap justify-center  gap-4">
+      <div className="flex flex-wrap justify-center  gap-5">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className=" p-2 rounded-md shadow-md w-80 flex flex-col items-center"
+          <Link
+          href={project.link}
+          target="_blank"
+          key={project.id}
+          className=" p-4 rounded-md shadow-md w-80 flex flex-col items-center hover:shadow-lg hover:shadow-gray-500 transition duration-300 ease-in-out"
           >
             <div className="w-full h-32 relative my-2">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={300}
-                height={200}
-                
-              
-                className="rounded-lg shadow-lg"
+                height={200}        
+                className="rounded-lg shadow-lg w-full"
               />
             </div>
             <div className="text-center flex flex-col my-2">
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-2">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                View Project
-              </a>
+              <p className="mb-2">{project.description}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
