@@ -27,13 +27,13 @@ export default function Home() {
         className="flex flex-col p-2  md:p-24 dark:bg-gray-900 dark:text-white"
        
       >
-        <div className="flex flex-col justify-between w-full items-center md:flex-row px-24">
+        <div className="flex flex-col justify-between w-full items-center px-24 md:flex-row">
           <div className="logo text-2xl md:text-4xl">
             <h1>
               Amaro,<span className="font-bold">Jhomari</span>
             </h1>
           </div>
-          <div className="flex flex-row gap-4 text-xl">
+          <div className="flex flex-row gap-4 text-xl" > 
             <a href="#about" className="hover:font-bold hover:underline">
               About
             </a>
@@ -54,7 +54,7 @@ export default function Home() {
         className="sr-only peer"
       />
       <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-      <span className="ms-3 text-sm font-medium ">
+      <span className="ms-3 text-sm font-medium hidden sm:block md:block lg:block">
         {`${darkMode ? "Dark" : "Light"}`}
       </span>
     </label>
