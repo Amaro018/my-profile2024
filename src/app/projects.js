@@ -7,72 +7,31 @@ import Link from "next/link";
 const projectsData = [
   {
     id: 1,
-    title: "Temp Converter",
+    title: "ONLINE RENTAL SHOP",
     description:
-      "A simple temperature converter from celcius to farenheit and vice versa made by old skool html,css and js",
-    image: "/images/temp.JPG",
-    link: "https://temperature-converter-jade.vercel.app/",
+      "ONGOING PROJECT. A simple online rental shop made by blitzjs",
+      image: "/images/default.jpg",
+    link: "https://github.com/Amaro018/react-subli",
   },
   {
     id: 2,
-    title: "Jak En Poy",
+    title: "IZEEK INVENTORY SYSTEM",
     description:
-      "A simple rock, paper, scissors game with computer made by old skool html,css and js",
-    image: "/images/game.JPG",
-    link: "https://jak-en-poy-ten.vercel.app/",
+      "FINISHED. an inventory system for the company izeek which stores and manages products of their company",
+    image: "/images/default.jpg",
+    link: "https://github.com/Amaro018/izeek",
   },
   {
     id: 3,
-    title: "Stop Watch",
-    description: "A simple Stop watch made by react with vite",
-    image: "/images/stop.JPG",
-    link: "https://stop-watch-react-tau.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Color Picker",
-    description: "A simple color picker made by react with vite",
-    image: "/images/colorpick.JPG",
-    link: "https://color-picker-gold-delta.vercel.app/",
-  },
-  {
-    id: 5,
-    title: "Shiny Pokemon Cry",
-    description: "A simple fetching shiny pokemon cry made by html,css,javascript",
-    image: "/images/shiny.JPG",
-    link: "https://poke-10w5jxy3l-jhomari-amaros-projects.vercel.app/",
-  },
-  {
-    id: 6,
-    title: "Weather API",
-    description: "Fetching weather data for a city using HTML, CSS, and JavaScript.",
-    image: "/images/weather.JPG",
-    link: "https://my-weather-app-blush-xi.vercel.app/",
-  },
-  {
-    id: 7,
-    title: "TODO LIST",
-    description: "A simple todo list using React with vite",
-    image: "/images/todo.JPG",
-    link: "https://to-do-list-seven-rosy.vercel.app/",
-  },
-  {
-    id: 8,
-    title: "Calculator",
-    description: "A simple calculator made by HTML,CSS and JS.",
-    image: "/images/calcu.JPG",
-    link: "https://calculator-olive-one.vercel.app/",
-  },
-  {
-    id: 9,
-    title: "Netflix Clone",
-    description: "A netflix clone landing page using HTML and CSS",
-    image: "/images/clone.JPG",
-    link: "https://netflix-clone-wheat-delta.vercel.app/",
+    title: "BARANGAY HEALTH MONITORING SYSTEM",
+    description:
+      "FINISHED. a system that automatically monitors the health status of barangay residents",
+      image: "/images/default.jpg",
+    link: "https://github.com/Amaro018/NHMS",
   },
 ];
 
-const Projects = () => {
+const Projects = (props) => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -97,15 +56,15 @@ const Projects = () => {
       {/* <div className="text-center my-4">
         <p className="text-4xl font-bold">Subli Online Rental Shop</p>
       </div> */}
-      <div className="flex flex-wrap justify-center  gap-5">
+      <div className="flex flex-wrap justify-center gap-4 ">
         {projects.map((project) => (
           <Link
           href={project.link}
           target="_blank"
           key={project.id}
-          className=" p-4 rounded-md shadow-md w-80 flex flex-col items-center hover:shadow-lg hover:shadow-gray-500 transition duration-300 ease-in-out"
+          className={`p-4 rounded-md shadow-md w-80 flex flex-col items-center hover:shadow-lg hover:shadow-gray-500 transition duration-300 ease-in-out ${props.darkMode ? 'bg-gray-400 text-black' : 'bg-slate-900 text-white'}`}
           >
-            <div className="w-full h-32 relative my-2">
+            <div className="w-full h-32 my-2">
               <Image
                 src={project.image}
                 alt={project.title}

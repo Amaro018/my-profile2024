@@ -6,6 +6,12 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Projects from "./projects.js";
 import Link from "next/link.js";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,8 +30,7 @@ export default function Home() {
    <div className={`${darkMode && "dark"}`}>
 
       <main
-        className="flex flex-col p-2  md:p-24 dark:bg-gray-900 dark:text-white"
-       
+        className="flex flex-col p-2  md:p-24 dark:bg-gray-900 dark:text-white gap-8"
       >
         <div className="flex flex-col justify-between w-full items-center px-24 md:flex-row">
           <div className="logo text-2xl md:text-4xl">
@@ -33,35 +38,25 @@ export default function Home() {
               Amaro,<span className="font-bold">Jhomari</span>
             </h1>
           </div>
-          <div className="flex flex-row gap-4 text-xl" > 
-            <a href="#about" className="hover:font-bold hover:underline">
-              About
-            </a>
-            <a href="#skill" className="hover:font-bold hover:underline">
-              Skill
-            </a>
+
+          <div className="flex flex-row gap-4 text-xl items-center" > 
+
             <a href="#contact" className="hover:font-bold hover:underline">
               Contact
             </a>
             <a href="#projects" className="hover:font-bold hover:underline">
               Projects
             </a>
-            <label className="inline-flex items-center cursor-pointer">
-      <input
-        type="checkbox"
-        checked={darkMode}
-        onChange={toggleDarkMode}
-        className="sr-only peer"
-      />
-      <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-      <span className="ms-3 text-sm font-medium hidden sm:block md:block lg:block">
-        {`${darkMode ? "Dark" : "Light"}`}
-      </span>
-    </label>
+       
+            <button type="button" onClick={toggleDarkMode} className="transform duration-300 hover:scale-110">
+              {/* <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div> */}
+              {darkMode ? <DarkModeIcon className="text-4xl"/> : <WbSunnyIcon className="text-4xl"/>}
+            </button>
           </div>
+
         </div>
 
-        <section id="introduction" className="my-2 md:my-16">
+        <section id="introduction" className="">
           <div className="flex flex-col w-full p-2 items-center justify-between md:flex-row my-4 ">
             <div className="w-1/2 flex">
               <Image
@@ -74,7 +69,7 @@ export default function Home() {
             </div>
             <div className="w-full gap-4 ">
               <div className="flex flex-col gap-4 text-center w-full md:text-justify">
-                <p className="text-5xl">Web Developer</p>
+                <p className="text-4xl font-bold">React Developer</p>
                 <p className="text-xl">
                   Hello, I am Jhomari Amaro, an aspiring developer from the
                   Philippines. I am passionate about technology and dedicated to
@@ -102,14 +97,11 @@ export default function Home() {
                   <FontAwesomeIcon icon={faGithub} className="w-6" />
                 </Link>
               </div>
-            </div>
-          </div>
-        </section>
-        <section id="skill" className="my-2">
-          <div className="text-center my-4">
-            <p className="text-4xl font-bold">Web Development Skills</p>
-          </div>
-          <div className="w-full flex justify-center gap-4">
+
+        <div className="flex flex-col gap-4 mt-4">
+            <p className="text-4xl font-bold text-center md:text-left">Skills</p>
+        </div>
+          <div className="w-full flex flex-row gap-4 mt-2 md:mt-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 384 512"
@@ -185,59 +177,57 @@ export default function Home() {
               <path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z" />
             </svg>
           </div>
+            </div>
+          </div>
         </section>
 
-        <div className="w-full flex flex-col my-4 md:px-24 items-center">
-          <div className="text-center flex flex-col gap-4 w-full md:text-justify">
-            <p className="text-2xl">Expertise</p>
-            <p className="text-xl">
-              I have experience in web development using HTML, CSS, and
-              JavaScript. I am proficient in front-end technologies such as
-              React, Angular, Tailwind, jQuery, and Vue.js. On the backend, I have worked with
-              Node.js and PHP frameworks like Laravel and Next.js. I also have experience
-              with databases including MySQL and Prisma. Additionally, I am
-              familiar with version control systems like Git.
-            </p>
-          </div>
-        </div>
 
-        <section id="contact" className="my-2">
-          <div className="text-center my-4">
+        
+        <section id="projects" className={`${darkMode ? "text-white" : "text-black"}`}>
+          <Projects darkMode={darkMode}/>
+        </section>
+
+        <section id="contact" className="flex flex-col justify-center border-2 border-slate-400 w-3/4 mx-auto p-4 rounded-lg shadow-lg gap-4">
+          <div className="text-center">
             <p className="text-4xl font-bold">Contact Me</p>
           </div>
           <div className="w-full flex flex-col md:px-24 gap-4 items-center">
             <div className="flex flex-col gap-2 w-full text-center md:text-justify">
-              <p className="text-xl">
+              <p className="text-xl text-center">
                 Interested in collaborating or have a project in mind? Let's
                 connect! You can reach out to me via email or LinkedIn.
               </p>
-              <p className="text-xl">
-                Email:{" "}
-                <a
-                  href="mailto:jhomari.amaro@gmail.com"
-                  className="text-blue-500 hover:underline"
-                >
-                  jhomari.amaro@gmail.com
-                </a>
-              </p>
-              <p className="text-xl">
-                LinkedIn:{" "}
-                <a
-                  href="https://www.linkedin.com/in/jhomari-amaro-945987242/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  Jhomari Amaro
-                </a>
-              </p>
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
+          <Link href="mailto:jhomari.amaro@gmail.com" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-2 items-center hover:underline">
+<AlternateEmailIcon/> jhomari.amaro@gmail.com
+          </Link>
+
+
+          <Link href="https://www.linkedin.com/in/jhomari-amaro-945987242" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-2 items-center hover:underline">
+<LinkedInIcon/> Jhomari Amaro
+          </Link>
+
+          <Link href="https://www.facebook.com/amaro018/" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-2 items-center hover:underline">
+<FacebookRoundedIcon/> Facebook
+          </Link>
+
+              </div>
             </div>
           </div>
         </section>
-        <section id="projects" className={`${darkMode ? "text-white" : "text-black"}`}>
-          <Projects />
-        </section>
       </main>
+      <footer className="w-full dark:bg-gray-900 dark:text-white border-t-2">
+    <div className="text-center p-4 flex flex-row justify-center gap-4">
+            <p>
+            2024 Copyright: Amaro Jhomari
+            </p>
+            <button type="button" onClick={toggleDarkMode} className="transform duration-300 hover:scale-110">
+              {/* <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div> */}
+              {darkMode ? <DarkModeIcon className="text-2xl"/> : <WbSunnyIcon className="text-2xl"/>}
+            </button>
+     </div>
+</footer>
+
       {/* <button className="fixed w-16 h-16 bottom-16 right-16 bg-neutral dark:bg-white rounded-full border border-black" onClick={toggleDarkMode}>{darkMode ? "Light" : "dark"}</button> */}
       </div>
   );
