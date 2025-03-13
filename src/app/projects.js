@@ -8,16 +8,15 @@ const projectsData = [
   {
     id: 1,
     title: "ONLINE RENTAL SHOP",
-    description:
-      "ONGOING PROJECT. A simple online rental shop made by blitzjs",
-      image: "/images/default.jpg",
+    description: "UNFINISHED. A simple online rental shop made by blitzjs",
+    image: "/images/default.jpg",
     link: "https://github.com/Amaro018/react-subli",
   },
   {
     id: 2,
     title: "IZEEK INVENTORY SYSTEM",
     description:
-      "FINISHED. an inventory system for the company izeek which stores and manages products of their company",
+      "UNFINISHED. an inventory system for the company izeek which stores and manages products of their company",
     image: "/images/default.jpg",
     link: "https://github.com/Amaro018/izeek",
   },
@@ -25,8 +24,8 @@ const projectsData = [
     id: 3,
     title: "BARANGAY HEALTH MONITORING SYSTEM",
     description:
-      "FINISHED. a system that automatically monitors the health status of barangay residents",
-      image: "/images/default.jpg",
+      "UNFINISHED. a system that automatically monitors the health status of barangay residents",
+    image: "/images/default.jpg",
     link: "https://github.com/Amaro018/NHMS",
   },
 ];
@@ -59,17 +58,21 @@ const Projects = (props) => {
       <div className="flex flex-wrap justify-center gap-4 ">
         {projects.map((project) => (
           <Link
-          href={project.link}
-          target="_blank"
-          key={project.id}
-          className={`p-4 rounded-md shadow-md w-80 flex flex-col items-center hover:shadow-lg hover:shadow-gray-500 transition duration-300 ease-in-out ${props.darkMode ? 'bg-gray-400 text-black' : 'bg-slate-900 text-white'}`}
+            href={project.link}
+            target="_blank"
+            key={project.id}
+            className={`p-4 rounded-md shadow-md w-80 flex flex-col items-center hover:shadow-lg hover:shadow-gray-500 transition duration-300 ease-in-out ${
+              props.darkMode
+                ? "bg-gray-400 text-black"
+                : "bg-slate-900 text-white"
+            }`}
           >
             <div className="w-full h-32 my-2">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={300}
-                height={200}        
+                height={200}
                 className="rounded-lg shadow-lg w-full"
               />
             </div>
